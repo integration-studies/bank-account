@@ -12,6 +12,8 @@ import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.UriInfo;
 
 @Path("/api/payments")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class PaymentResource {
 
   private final PaymentService paymentService;
@@ -22,8 +24,6 @@ public class PaymentResource {
   }
 
   @POST
-  @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
   public Response pay(PaymentRequest paymentRequest,@Context UriInfo uriInfo) {
     final var paymentResult = this.paymentService.pay(paymentRequest);
     if(paymentResult.getOperationSuccess()){

@@ -8,46 +8,18 @@ import java.math.BigDecimal;
  */
 public class PaymentRequest {
 
-  String fromAccount;
+  public String fromAccount;
 
-  String toAccount;
+  public String toAccount;
 
-  String value;
+  public Double value;
 
-  String type;
+  public String type;
 
-  String subType;
+  public String subType;
 
-  String time;
+  public String time;
 
-  String deviceType;
-
-  public String getFromAccount() {
-    return fromAccount;
-  }
-
-  public String getToAccount() {
-    return toAccount;
-  }
-
-  public String getValue() {
-    return value;
-  }
-
-  public String getType() {
-    return type;
-  }
-
-  public String getSubType() {
-    return subType;
-  }
-
-  public String getTime() {
-    return time;
-  }
-
-  public String getDeviceType() {
-    return deviceType;
-  }
+  public String deviceType;
 
 }
